@@ -9,6 +9,15 @@ def main(page: ft.Page) -> None:
     page.window_height = 400
     page.window_resizable = False
 
+    #Creando las funciones necesarias
+    
+    def definir_sistema1(e):
+        sist1 = e.control.content.value
+        print(f"{sist1}.on_click")
+        menu1.controls.__subclasshook__= f"{sist1}"
+        page.update()
+        
+
 
     #Creating the menu bar
 
@@ -19,15 +28,23 @@ def main(page: ft.Page) -> None:
                 controls=[
                     ft.MenuItemButton(
                         content=ft.Text("Binario"),
+                        on_click=definir_sistema1
+                        
                     ),
                     ft.MenuItemButton(
                         content=ft.Text("Octal"),
+                        on_click=definir_sistema1
+                        
                     ),
                     ft.MenuItemButton(
                         content=ft.Text("Decimal"),
+                        on_click=definir_sistema1
+                    
                     ),
                     ft.MenuItemButton(
                         content=ft.Text("Hexadecimal"),
+                        on_click=definir_sistema1
+                     
 
                     )
 
@@ -49,13 +66,11 @@ def main(page: ft.Page) -> None:
     #Defining the things that will be inside the window
 
     menu1 = menubar
-    number_1: ft.TextField = ft.TextField(text_align= ft.TextAlign.LEFT , width=200)
+    number_1: ft.TextField = ft.TextField(text_align= ft.TextAlign.LEFT , width=200,  label="Numero a Traducir")
     menu2= menubar
-    number_2: ft.TextField = ft.TextField(text_align= ft.TextAlign.LEFT , width=200)
+    number_2: ft.TextField = ft.TextField(text_align= ft.TextAlign.LEFT , width=200, label="Numero Traducido", disabled=True)
 
     
-
-
 
     page.add(
         ft.Row(
