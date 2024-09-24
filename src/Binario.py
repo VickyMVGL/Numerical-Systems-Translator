@@ -16,7 +16,7 @@ class Binario:
             print(int(numeros[cont]))
             decimal = decimal + (int(numeros[cont]) * (2 ** cont))
             cont +=1
-        return decimal
+        return str(decimal)
 
     def BinToOctal(self):
 
@@ -88,7 +88,6 @@ class Binario:
         numeros =[]
         for caracter in num:
             numeros.append(int(caracter))
-            print(numeros[:])
 
         #Revertimos la cadena para leer el numero de derecha a izquierda
         numeros.reverse()
@@ -164,25 +163,3 @@ class Binario:
         
         #Logramos obtener el numero!!!!!
         return hex
-
-
-
-
-
-                
-            
-            
-
-
-        
-
-    
-    
-    
-
-
-
-numero = Binario("11110111011101")
-print(numero.BinToHex())
-
- 

@@ -5,10 +5,10 @@ class Decimal:
         self.valor = valor
 
     def DecToBin(self):
-            num = self.valor
+            num = int(self.valor)
             binario = ""
             while num > 0:
                 binario = str(num % 2) + binario
                 num = num // 2
-            bin = Binario(binario)
-            return bin
+            bin = Binario.Binario(binario)
+            return bin.valor

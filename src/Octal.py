@@ -5,7 +5,7 @@ class Octal:
         self.valor = valor
 
     def OctalToBin(self):
-        num = self.valor
+        num = int(self.valor)
         binario = ""
         numeros =[]
         while num > 0:
@@ -32,5 +32,5 @@ class Octal:
             else:
                 binario = binario + "0"
             
-        bin = Binario(binario)
-        return bin
+        bin = Binario.Binario(binario)
+        return bin.valor

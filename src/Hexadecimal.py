@@ -1,6 +1,6 @@
 import Binario
 
-class hexadecimal:
+class Hexadecimal:
     def __init__(self, valor):
         self.valor = valor
     
@@ -47,6 +47,7 @@ class hexadecimal:
                 numero -= 1
             else:
                 binario = binario + "0"
-        bin= Binario(binario)
-        return bin
+        bin= Binario.Binario(binario)
+        
+        return bin.valor
 
